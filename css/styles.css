@@ -1,0 +1,145 @@
+:root {
+font-size: 16;
+font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+--text-primary: #b6b6b6;
+--text-secondary: #ececec;
+--bg-primary: #000000;
+--bg-secondary: #343437;
+--transition-speed: 600ms;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+color: black;
+background-color: white;
+margin: 0;
+padding: 0;
+}
+
+body::-webkit-scrollbar {
+width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+background: #6649b8;
+}
+
+
+main {
+margin-top: 4rem;
+padding: 1rem;
+}
+
+.navbar {
+position: fixed-top;
+background-color: var(--bg-primary);
+}
+
+.nav-brand {
+    margin-left: 3rem;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.50rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    white-space: nowrap;
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+.navbar-nav {
+justify-content: center;
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+flex-direction: row;
+align-items: center;
+width: 100%;
+}
+
+.nav-item {
+margin: 0;
+}
+
+
+.nav-link {
+display: flex;
+align-items: center;
+height: 4rem;
+padding: 8px;
+color: var(--text-primary);
+text-decoration: none;
+filter: grayscale(100%) opacity(0.7);
+transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+filter: grayscale(0%) opacity(1);
+background: var(--bg-secondary);
+color: var(--text-secondary);
+}
+
+.link-text {
+display: none;
+margin-left: 1rem;
+}
+
+.nav-link svg {
+width: 2rem;
+min-width: 2rem;
+margin: 0 1.5rem;
+}
+
+.fa-primary {
+color: #ff7eee;
+}
+
+.fa-secondary {
+color: #df49a6;
+}
+
+.fa-primary,
+.fa-secondary {
+transition: var(--transition-speed);
+}
+
+.logo {
+font-weight: bold;
+text-transform: uppercase;
+margin-bottom: 1rem;
+text-align: center;
+color: var(--text-secondary);
+background: var(--bg-secondary);
+font-size: 1.5rem;
+letter-spacing: 0.3ch;
+width: 100%;
+}
+
+.logo svg {
+transform: rotate(0deg);
+transition: var(--transition-speed);
+}
+
+.logo-text
+{
+display: inline;
+position: absolute;
+left: -999px;
+transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg {
+transform: rotate(-180deg);
+}
