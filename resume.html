@@ -2,64 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/scripts.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>Portfoil.io - Harri Vaelilae - Resume</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfoil.io - Harri Vaelilae - Resume</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-sm bg-dark sticky-top" data-bs-theme="dark" id="navbar"></nav>
-
-    <header class="container m-5">
-        <div class="row justify-content-md-center">
-            <div class="col col-lg-3">
-                <h1>Harri Vaelilae</h1>
-            </div>
-        </div>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+          <!-- <li class="logo"></li> -->
+          <a class="nav-brand" href="#">Portfoil.io</a>
+          <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-2x fa-fw"></i> Home</a> </li>
+          <li class="nav-item"><a class="nav-link" href="resume.html"><i class="fa fa-file-text fa-2x fa-fw"></i> Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html"><i class="fa fa-cog fa-2x fa-fw"></i> Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://github.com/harvali"><i class="fa fa-github fa-2x fa-fw"></i> Github</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/harvali/"><i class="fa fa-linkedin-square fa-2x fa-fw"></i> LinkedIn</a></li>
+        </ul>
+  </nav>
+   
+<main class="wrapper">
+    
+    <header class="header">
+        <h1>Harri Vaelilae</h1>
     </header>
+        
+    <article title="Contact info" id="contact_conainer" class="block-a">
+    <h2>Contact</h2>
+        <ul class="contact-info">
+            <li>Email: harri.valila@live.com</li>
+            <li>Call: +1 808 895 4528</li>
+            <li>LinkedIn: www.linkedin.com/in/harvali</li>
+            <li>Address: Po Box 998, Haiku, Hawaii</li>
+            <li>Github: https://github.com/harvali</li>
+        </ul>
+    </article>
+    
+    <article title="Skills info" class="block-b">
+        <h2>Skills</h2>
+        <p>
+            | JavaScript | MongoDB | PostgreSQL | Node | Express | React | React Native | Redux | jQuery | Git
+            | Azure | GCP | AWS | Cloud Computing | CI/CD |
+            | Frontend | Backend | Full-Stack |
+        </p>
+    </article>    
 
-    <div class="container">
-        <div class="row justify-content-md-center">
-
-            <div class="col-4">
-                <h2>Contact</h2>
-                <ul>
-                    <li>Email: harri.valila@live.com</li>
-                    <li>Call: +1 808 895 4528</li>
-                    <li>LinkedIn: www.linkedin.com/in/harvali</li>
-                    <li>Address: Po Box 998, Haiku, Hawaii</li>
-                    <li>Github: https://github.com/harvali</li>
-                </ul>
-                <h2>Skills</h2>
-                <p>
-                    | JavaScript | MongoDB | PostgreSQL | Node | Express | React | React Native | Redux | jQuery | Git
-                    | Azure | GCP | AWS | Cloud Computing | CI/CD |
-                    | Frontend | Backend | Full-Stack |
-                </p>
-            </div>
-
-            <div class="col-auto">
-                <h2>Experience</h2>
-                <ul>
-                    <li>Field Technician</li>
-                    <li>Professional Experience</li>
-                    <li>Technical Sales Presentative</li>
-                    <li>Customer Service Specialist</li>
-                    <li>Account Associate</li>
-                    <li>Telemarketing Representative</li>
-                    <li>Technical Customer Support Representative</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <footer>Footer Information</footer>
-
+    <article title="Experience info" class="content">
+        <h2>Experience</h2>
+            <ul>
+                <li>Field Technician</li>
+                <li>Professional Experience</li>
+                <li>Technical Sales Presentative</li>
+                <li>Customer Service Specialist</li>
+                <li>Account Associate</li>
+                <li>Telemarketing Representative</li>
+                <li>Technical Customer Support Representative</li>
+            </ul>
+    </article>
+    
+    <footer class="footer">Footer Information</footer>
+    
+</main>
 </body>
 
 </html>
