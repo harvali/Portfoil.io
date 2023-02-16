@@ -204,6 +204,21 @@ body{
     font-weight: 300;
 }
 
+.contactInfo.skills ul
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align:center;
+    justify-content: space-evenly;
+}
+
+.contactInfo.skills ul p
+{
+    font-size: 13px;
+}
+
+
 .contactInfo.language .percent
 {
     position: relative;
