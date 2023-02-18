@@ -1,6 +1,5 @@
 :root {
-font-size: 16;
-font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+font-size: 16px;
 --text-primary: #b6b6b6;
 --text-secondary: #ececec;
 --bg-primary: #000000;
@@ -14,6 +13,8 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sa
 box-sizing: border-box;
 margin: 0;
 padding: 0;
+/* outline: 2px solid limegreen !important; */
+/* background: rgb(0 100 0 / 0.1) !important; */
 }
 
 body {
@@ -35,7 +36,6 @@ body::-webkit-scrollbar-thumb {
 background: #6649b8;
 }
 
-
 main {
 margin-top: 4rem;
 padding: 1rem;
@@ -44,6 +44,8 @@ padding: 1rem;
 .navbar {
 position: fixed-top;
 background-color: var(--bg-primary);
+font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+
 }
 
 .nav-brand {
@@ -55,7 +57,6 @@ background-color: var(--bg-primary);
     color: var(--text-secondary);
     text-decoration: none;
     white-space: nowrap;
-    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 .navbar-nav {
@@ -91,55 +92,83 @@ background: var(--bg-secondary);
 color: var(--text-secondary);
 }
 
-.link-text {
-display: none;
-margin-left: 1rem;
+
+h1, p {
+    margin: 0 0 1em 0;
+    color: #c4c4c4;
+  }
+  
+.wrapper {
+    max-width: 940px;
+    margin: 0 20px;
+    display: grid;
+    grid-gap: 10px;
+}
+  
+@media screen and (min-width: 600px) {
+
+/* no grid support? */
+.block-a, .block-b, .block-c {
+    float: left;
+    width: 19.1489%;
 }
 
-.nav-link svg {
-width: 2rem;
-min-width: 2rem;
-margin: 0 1.5rem;
+.content {
+    float: right;
+    width: 79.7872%;
 }
 
-.fa-primary {
-color: #ff7eee;
+.wrapper {
+    margin: 0 auto;
+    grid-template-columns: 1fr 3fr;
+    grid-auto-rows: minmax(150px, auto);
 }
 
-.fa-secondary {
-color: #df49a6;
+.header, .footer {
+    background-color: white;
+
+    font-size: 16px;
+    grid-column: 1 / -1;
+    /* needed for the floated layout */
+    clear: both;
 }
 
-.fa-primary,
-.fa-secondary {
-transition: var(--transition-speed);
+.block-a {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    grid-column: 1;
+    grid-row: 2;
 }
 
-.logo {
-font-weight: bold;
-text-transform: uppercase;
-margin-bottom: 1rem;
-text-align: center;
-color: var(--text-secondary);
-background: var(--bg-secondary);
-font-size: 1.5rem;
-letter-spacing: 0.3ch;
-width: 100%;
+.block-b {
+    grid-column: 1;
+    grid-row: 4;
 }
 
-.logo svg {
-transform: rotate(0deg);
-transition: var(--transition-speed);
+.block-c {
+    grid-column: 1;
+    grid-row: 6;
 }
 
-.logo-text
-{
-display: inline;
-position: absolute;
-left: -999px;
-transition: var(--transition-speed);
+.content {
+    grid-column: 2;
+    grid-row: 2 / 7;
 }
 
-.navbar:hover .logo svg {
-transform: rotate(-180deg);
+}
+
+.wrapper > * {
+border-radius: 5px;
+padding: 20px;
+/* font-size: 150%; */
+/* needed for the floated layout*/
+margin-bottom: 10px;
+}
+
+/* We need to set the widths used on floated items back to auto, and remove the bottom margin as when we have grid we have gaps. */
+@supports (display: grid) {
+.wrapper > * {
+    width: auto;
+    margin: 0;
+}
 }
