@@ -1,22 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 :root {
 font-size: 16px;
---text-primary: #b6b6b6;
---text-secondary: #ececec;
---bg-primary: #000000;
---bg-secondary: #343437;
+--text-primary: white;
+--text-secondary: black;
+--text-accent:gray;
+--bg-primary: silver;
+--bg-secondary: white;
+--bg-accent: rgb(87, 82, 82);
+--col-coal: #383535 ;
 --transition-speed: 600ms;
 }
 
-*,
-*::before,
-*::after {
-box-sizing: border-box;
-margin: 0;
-padding: 0;
-/* outline: 2px solid limegreen !important; */
-/* background: rgb(0 100 0 / 0.1) !important; */
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* outline: 2px solid limegreen !important; */
+    /* background: rgb(0 100 0 / 0.1) !important; */
+    font-family: 'Poppins', sans-serif;    
+}
+a:link {
+    color: var(--text-primary);
+    text-decoration: none;
 }
 
+a:visited {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+a:active {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
 body {
 color: black;
 background-color: white;
@@ -42,8 +65,7 @@ padding: 1rem;
 }
 
 .navbar {
-position: fixed-top;
-background-color: var(--bg-primary);
+background-color: var(--col-coal);
 font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
 
 }
@@ -54,7 +76,7 @@ font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sa
     padding-bottom: 0.3125rem;
     margin-right: 1rem;
     font-size: 1.50rem;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     text-decoration: none;
     white-space: nowrap;
 }
