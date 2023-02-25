@@ -12,7 +12,6 @@
     --transition-speed: 600ms;
     }
 
-
 *
 {
     margin: 0;
@@ -42,11 +41,6 @@ a:active {
     color: var(--text-primary);
     text-decoration: underline;
 }
-
-
-
-
-
 
 body{
     background: var(--bg-primary);
@@ -160,7 +154,7 @@ color: var(--text-secondary);
 
 .container
 {
-    position: relative;
+    /* position: relative; */
     width: 100%;
     max-width: 1000px;
     min-height: 1000px;
@@ -405,6 +399,12 @@ color: var(--text-secondary);
     font-size: 12px;
 }
 
+.hardskills ul li:last-child p:last-child
+{
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
 .experience
 {
     position: relative;
@@ -498,6 +498,7 @@ margin-bottom: 15px;
 {
     .container
     {
+        position: relative;
         margin: 10px;
         grid-template-columns: repeat(1,1fr);
     }
@@ -510,11 +511,24 @@ margin-bottom: 15px;
         display: block;
     }
 
+    .navbar
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+        justify-content:flex-start;
+        align-items: flex-end;
+        min-height: auto;
+
+    }
+
     .menu-button-container {
         display: flex;
       }
       .navbar-nav {
-        position: absolute;
+        position: relative;
         top: 0;
         margin-top: 80px;
         left: 0;
@@ -547,9 +561,5 @@ margin-bottom: 15px;
       }
       .navbar-nav > li:not(:last-child) {
         border-bottom: 1px solid #444;
-      }
-      .container
-      {
-        display: none;
       }
 }
