@@ -359,13 +359,19 @@ color: var(--text-secondary);
     text-align: left;
     font-weight: 600;
     line-height: 0.8em;
-    padding-bottom: 110px;
+    padding-bottom: 10px;
 }
 .profileText2 h2 span
 {
     font-size: 0.6em;
     font-weight: 300;
 }
+
+.profileText2 p
+{
+    padding-bottom: 50px;
+}
+
 .hardskills
 {
     position: relative;
