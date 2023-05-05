@@ -14,13 +14,14 @@ font-size: 16px;
 
 *
 {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
     /* outline: 2px solid limegreen !important; */
     /* background: rgb(0 100 0 / 0.1) !important; */
-    font-family: 'Poppins', sans-serif;    
 }
+
 a:link {
     color: var(--text-primary);
     text-decoration: none;
@@ -40,24 +41,15 @@ a:active {
     color: var(--text-primary);
     text-decoration: underline;
 }
-body {
-color: black;
-background-color: white;
-margin: 0;
-padding: 0;
+
+body{
+    background: var(--bg-primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
-body::-webkit-scrollbar {
-width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-background: #6649b8;
-}
 
 main {
 margin-top: 4rem;
@@ -65,24 +57,32 @@ padding: 1rem;
 }
 
 .navbar {
-background-color: var(--col-coal);
-font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
-
+    background-color: var(--col-coal);
+    font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue","Noto Sans","Liberation Sans",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";;
+    min-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    justify-content: space-around;
 }
-
+    
 .nav-brand {
-    margin-left: 3rem;
     padding-top: 0.3125rem;
     padding-bottom: 0.3125rem;
-    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
     font-size: 1.50rem;
     color: var(--text-primary);
     text-decoration: none;
-    white-space: nowrap;
+    margin: auto;
+    justify-content: right;
+    width: 30vw;
 }
 
 .navbar-nav {
-justify-content: center;
+justify-content: left;
 list-style: none;
 padding: 0;
 margin: 0;
@@ -90,6 +90,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 width: 100%;
+list-style-type: none;
 }
 
 .nav-item {
@@ -114,10 +115,53 @@ background: var(--bg-secondary);
 color: var(--text-secondary);
 }
 
+  
+  .navbar-nav > li {
+    margin: 0 1rem;
+    overflow: hidden;
+  }
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+  }
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+  display: block;
+  background-color: #fff;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -8px;
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 8px;
+}
+
+
 
 h1, p {
     margin: 0 0 1em 0;
-    color: #c4c4c4;
+    color: var(--bg-secondary);
   }
   
 .wrapper {
@@ -193,4 +237,59 @@ margin-bottom: 10px;
     width: auto;
     margin: 0;
 }
+}
+
+@media (max-width:700px)
+{
+    .navbar
+    {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin: 0;
+        padding: 0;
+        justify-content:flex-start;
+        align-items: flex-end;
+        min-height: auto;
+
+    }
+
+    .menu-button-container {
+        display: flex;
+      }
+      .navbar-nav {
+        position: relative;
+        top: 0;
+        margin-top: 80px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+      #menu-toggle ~ .navbar-nav li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      #menu-toggle:checked ~ .navbar-nav li {
+        border: 1px solid #333;
+        height: 3.5em;
+        padding: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+      }
+      .navbar-nav > li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+      }
+      .navbar-nav > li:not(:last-child) {
+        border-bottom: 1px solid #444;
+      }
 }
