@@ -405,10 +405,14 @@ color: var(--text-secondary);
     font-size: 12px;
 }
 
+.hardskills h4
+{
+    margin-bottom: 5px;
+}
 .hardskills ul li:last-child p:last-child
 {
     font-size: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 .experience
