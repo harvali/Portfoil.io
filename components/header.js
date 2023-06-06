@@ -17,7 +17,8 @@ class Header extends HTMLElement {
         <ul class="navbar-nav">   
             <li class="nav-item"><a class="nav-link" href="index.html"><i class="fa fa-home fa-2x fa-fw"></i> Home</a> </li>
             <li class="nav-item"><a class="nav-link" href="cv.html"><i class="fa fa-file-text fa-2x fa-fw"></i> Resume</a></li>
-            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-cog fa-2x fa-fw"></i> Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html"><i class="fa fa-cog fa-2x fa-fw"></i> Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html"><i class="fa-solid fa-blog fa-2x fa-fw"></i> Blog</a></li>
             <li class="nav-item"><a class="nav-link" href="https://github.com/harvali"><i class="fa fa-github fa-2x fa-fw"></i> Github</a></li>
             <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/harvali/"><i class="fa fa-linkedin-square fa-2x fa-fw"></i> LinkedIn</a></li>
         </ul>

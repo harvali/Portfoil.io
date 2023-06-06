@@ -51,6 +51,16 @@ body{
     width: auto;
 }
 
+header-component{
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+}
 
 main {
 margin-top: 4rem;
