@@ -65,6 +65,11 @@ header{
 main {
 margin-top: 4rem;
 padding: 1rem;
+
+}
+
+.mountainking {
+  width: -webkit-fill-available;
 }
 
 .navbar {
