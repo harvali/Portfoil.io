@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfoil.io Mainpage</title>
+  <script src="./js/unpkg.com_htmx.org@1.9.4_dist_htmx.min.js"></script>
   <link rel="stylesheet" href="css/styles.css">
   <script src="https://kit.fontawesome.com/868f55aed4.js" crossorigin="anonymous"></script>
   <!-- <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"> -->
@@ -24,20 +25,34 @@
 <main>
 
 <h1>Website construction TODO:</h1>
+
+<div hx-target="this" hx-swap="outerHTML">
+  <div><label>First Name</label>: Joe</div>
+  <div><label>Last Name</label>: Blow</div>
+  <div><label>Email</label>: joe@blow.com</div>
+  <button hx-get="http://localhost:3001/contacts/1" class="btn btn-primary">
+  Click To Edit
+  </button>
+</div>
+
 <ul id = "output">
   <li><strong>Write down and populate this TODO list</strong><chec-ker /></li>
+  <li><s>Implement rough blog page & add links **</s><chec-ker/></li>
+  <li><s>Anonymous login *</s><chec-ker/></li>
+  <li><s>Revisit RESTful APIs and integrating backend services *</s><chec-ker/></li>
+  <li>Make todo list to work *<chec-ker/></li>
+  <li>Project page: Make layout for project thumbs, modify thumbnail pics and link pages * <chec-ker/></li>
+  <li>Generate Individual project pages * <chec-ker/></li>
+  <li>Money site #iso<chec-ker/></li>
+  <li>Write project descriptions #iso<chec-ker/></li>
+  <li>Record Demos for each project #iso<chec-ker/></li>
+  <li>Start with EV website #iso<chec-ker/></li>
+  <li>Algorithms #iso<chec-ker/></li>
+  <li><s>Generate Single Sign-On (SSO) authentication, preferably using Azure. #iso 08/06 </s><chec-ker/></li>
+  <li><s>Build log-in functionality for todo list editing *</s><chec-ker/></li>
+  <li><s> the progress in the blog, check possibility for speech to text app </s><chec-ker/></li>
   <li><s>continue with node express local server</s><chec-ker/></li>
-  <li>Select Authentication method for login<chec-ker/></li>
-  <li>Build log-in functionality for todo list editing<chec-ker/></li>
-  <li>Make todo list to work<chec-ker/></li>
-  <li>Implement rough blog page<chec-ker/></li>
-  <li>Record the progress in the blog, check possibility for speech to text app <chec-ker/></li>
-  <li>Project page: Make layout for project thumbs, modify thumbnail pics and link pages <chec-ker/></li>
-  <li>Generate Individual project pages <chec-ker/></li>
-  <li>Write project descriptions <chec-ker/></li>
-  <li>Record Demos for each project <chec-ker/></li>
-  <li>Revisit RESTful APIs and integrating backend services <chec-ker/></li>
-  <li>Generate Single Sign-On (SSO) authentication, preferably using Azure. <chec-ker/></li>
+  <li><s>Select Authentication method for login</s><chec-ker/></li>
   
   <li>...add a task <add-er/></li>
 </ul>
