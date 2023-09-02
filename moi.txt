@@ -1,0 +1,74 @@
+uname -m && cat /etc/*release
+
+20.04
+
+uname -srmv
+
+5.15.0.58-generic
+
+sudo apt update
+sudo apt dist-upgrade
+
+sudo apt install wget gnupg2 gawk curl
+sudo apt install libnuma-dev libncurses5
+
+sudo reboot
+
+sudo usermode -a render,video $LOGNAME
+
+sudo apt update
+wget https://repo.radeon.com/amdgpu-install/5.4.2/ubuntu/focal/amdgpu-install_5.4.50402-1_all.deb
+sudo apt install ./amdgpu-install_5.4.50402-1_all.deb
+
+sudo amdgpu-install --usecase=rocm --no-dkms
+
+sudo echo ROC_ENABLE_PRE_VEGA=1 >> /etc/environment
+sudo echo HSA_OVERRIDE_GFX_VERSION=8.0.3 >> /etc/environment
+# reboot
+
+wget https://repo.radeon.com/amdgpu-install/22.40.3/ubuntu/focal/amdgpu-install_5.4.50403-1_all.deb
+sudo apt install ./amdgpu-install_5.4.50403-1_all.deb
+sudo amdgpu-install -y --usecase=rocm,hiplibsdk,mlsdk
+
+sudo usermod -aG video $LOGNAME
+sudo usermod -aG render $LOGNAME
+
+# verify
+rocminfo
+clinfo
+
+
+
+sudo apt update
+sudo apt dist-upgrade
+sudo apt install libnuma-dev
+sudo reboot
+
+sudo apt install linux-headers-5.4.0-42-generic \
+linux-image-5.4.0-42-generic \
+linux-modules-5.4.0-42-generic \
+linux-modules-extra-5.4.0-42-generic  
+
+oot with kernel 5.4.0-42-generic
+
+sudo apt-get purge *5.8.0*
+sudo apt-get purge *5.15.0-79*
+sudo apt-get purge *5.15.0-67*
+
+uname -r
+
+tarkista with kernel 5.4.0-42-generic
+
+
+wget -q -O - http://repo.radeon.com/rocm/rocm.gpg.key | sudo apt-key add -
+echo 'deb [arch=amd64] http://repo.radeon.com/rocm/apt/3.5.1/ xenial main' | sudo tee /etc/apt/sources.list.d/rocm.list
+sudo apt update
+sudo apt install rocm-dkms && sudo reboot
+
+sudo usermod -a -G video $LOGNAME
+sudo usermod -a -G render $LOGNAME
+sudo reboot
+
+echo 'export PATH=$PATH:/opt/rocm/bin:/opt/rocm/profiler/bin:/opt/rocm/opencl/bin' | sudo tee -a /etc/profile.d/rocm.sh
+sudo ldconfig
+sudo reboot
